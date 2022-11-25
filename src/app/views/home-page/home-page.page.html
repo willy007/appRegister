@@ -1,0 +1,45 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-title slot="start">Inicio</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="btnHome()">
+        <ion-icon slot="icon-only" name="person-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+<ion-content >
+  <div class="contanier" >
+    <h4 >Bienvenido {{user.rol}} {{user.nombre}} </h4>
+  </div>
+  
+
+  <ion-fab *ngIf="isAlumno" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  
+
+  <ion-list lines="none" >
+
+    <ion-item *ngFor="let item of user.asignaturas " button>
+      <ion-label>
+        {{item.nombre}}
+        <p>{{item.profesor}}</p>
+      </ion-label>
+
+      <ion-label>{{item.asistencia}}%</ion-label>
+      
+      <ion-icon name="arrow-forward-outline"></ion-icon>
+
+    </ion-item>
+
+  </ion-list>
+
+</ion-content>

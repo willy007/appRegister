@@ -1,0 +1,59 @@
+<ion-content >
+  
+  <form [formGroup]="registerFrom" (ngSubmit)="Registro()">
+
+    <ion-item class="item-margin margin-top"  fill="outline" mode="md">
+      <ion-label color="duoc"  position="floating">Correo</ion-label>
+      <ion-input type="email" formControlName="mail"></ion-input>
+    </ion-item>
+
+    <span class="error ion-padding" *ngIf="isEnviado && errorControl.mail.errors?.required">
+      Este campo es requerido
+    </span>
+
+    <span class="error ion-padding" *ngIf="isEnviado && errorControl.mail.errors?.pattern">
+      Correo no valido.
+    </span>
+    
+    <br>
+
+    <ion-item class="item-margin"  fill="outline" mode="md">
+      <ion-label color="duoc"  position="floating">Nombre</ion-label>
+      <ion-input  type="text" formControlName="name"></ion-input>
+    </ion-item>
+
+    <span class="error ion-padding" *ngIf="isEnviado && errorControl.name.errors?.required">
+      Este campo es requerido.
+    </span>
+
+    <span class="error ion-padding" *ngIf="isEnviado && errorControl.name.errors?.minlength">
+      Requiere un minimo de 4 caracteres.
+    </span>
+
+    <br>
+
+    <ion-item class="item-margin"  fill="outline" mode="md">
+      <ion-label color="duoc"  position="floating">Contraseña</ion-label>
+      <ion-input  type="password" formControlName="password"></ion-input>
+    </ion-item>
+
+    <span class="error ion-padding" *ngIf="isEnviado && errorControl.password.errors?.required">
+      Este campo es requerido.
+    </span>
+    
+    <span class="error ion-padding" *ngIf="isEnviado && errorControl.password.errors?.minlength">
+      Requiere un minimo de 6 caracteres.
+    </span>
+
+    <br>
+
+    <ion-button class="button-margin" color="duoc" type="submit" expand="block"  >
+      Registrar
+    </ion-button>
+    <ion-button class="button-margin" color="dark" expand="block" href="/login-page">
+      ingresar
+    </ion-button>
+
+  </form>
+
+</ion-content>

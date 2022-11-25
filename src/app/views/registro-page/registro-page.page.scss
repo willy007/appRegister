@@ -1,0 +1,44 @@
+.ion-color-duoc {
+	--ion-color-base: var(--ion-color-duoc);
+	--ion-color-base-rgb: var(--ion-color-duoc-rgb);
+	--ion-color-contrast: var(--ion-color-duoc-contrast);
+	--ion-color-contrast-rgb: var(--ion-color-duoc-contrast-rgb);
+	--ion-color-shade: var(--ion-color-duoc-shade);
+	--ion-color-tint: var(--ion-color-duoc-tint);
+}
+
+.logo{
+    
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    display: block;
+    justify-content: center;
+}
+
+.margin-top{
+    margin-top: 5rem;
+}
+
+.item-margin{
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.button-margin{
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+    --border-radius: 10px;
+    --border-bottom: 10px;
+}
+
+ion-item {
+    --border-width: 3px;
+}
+
+ion-item::part(native){
+    border-radius: 10px;
+}
